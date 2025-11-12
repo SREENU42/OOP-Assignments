@@ -10,17 +10,17 @@ class Authentication{
   private int storedpassword=1122;
 
     public boolean login(String userName, int password) {
-    return userName.equals(storedUserName) && password == storedPassword;
+    return userName.equals(storeduserName) && password == storedpassword;
     }
 }
 class LoginAuthentication{
   public static void main (String[] args) {
-    LoginAuthentication auth=new LoginAuthentication();
+    Authentication auth=new Authentication();
     
     String enteredUser="Sreenu";
-    int enteredpasword=1122;
+    int enteredPassword=1122;
     
-    if(auth.login(enteredUser,enteredpassword)){
+    if(auth.login(enteredUser,enteredPassword)){
       System.out.println("Login Successfull:"+enteredUser);
     }else{
       System.out.println("Invalid Credential..Please Try Again..");
